@@ -74,8 +74,8 @@ def check_capacity_loop():
                     bot.send_message(USER_ID, f"⚠️ Error in {ad}:\n{response_or_error}")
                     
         if not success and running:
-            # Wait 60 seconds before trying again to avoid rate limiting
-            time.sleep(60)
+            # Wait 300 seconds (5 minutes) before trying again to avoid rate limiting
+            time.sleep(300)
 
 def require_auth(func):
     def wrapper(message, *args, **kwargs):
