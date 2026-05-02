@@ -36,7 +36,7 @@ class OciManager:
         }
         
         try:
-            oci.config.validateconfig(self.config)
+            oci.config.validate_config(self.config)
             self.compute_client = oci.core.ComputeClient(self.config)
             self.identity_client = oci.identity.IdentityClient(self.config)
         except Exception as e:
